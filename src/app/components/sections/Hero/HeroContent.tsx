@@ -6,7 +6,12 @@ import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-export const HeroContent = () => {
+interface HeroContentProps {
+  isHeroHovered?: boolean;
+  onInputHoverChange?: (hovered: boolean) => void;
+}
+
+export const HeroContent = ({ isHeroHovered = false, onInputHoverChange }: HeroContentProps) => {
   const [index, setIndex] = useState(0);
   const words = HERO_CONTENT.titleHighlights;
 
@@ -41,7 +46,7 @@ export const HeroContent = () => {
         </p>
       </div>
 
-      <EmailForm />
+      <EmailForm isHeroHovered={isHeroHovered} onInputHoverChange={onInputHoverChange} />
     </div>
   );
 };

@@ -1,6 +1,9 @@
 import './globals.css';
 import { Header } from './components/navigation/Header';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Geist } from 'next/font/google';
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -10,7 +13,7 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-[#F8F9FE]">
+    <html lang="en" className={cn("bg-[#F8F9FE]", "font-sans", geist.variable)}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
