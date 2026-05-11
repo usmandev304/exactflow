@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import { useState } from 'react';
 import { Sun, Menu } from 'lucide-react';
@@ -8,7 +7,6 @@ import { MobileMenu } from './MobileMenu';
 import { Button } from '../ui/Button';
 import logoImg from '../../../../public/image/logo.avif'
 import { Montserrat } from 'next/font/google';
-
 
 const LoginCircleIcon = ({ className = 'w-6 h-6' }: { className?: string }) => (
   <svg
@@ -56,9 +54,23 @@ export const Header = () => {
           </div>
 
           <div className="flex items-center sm:gap-8 xsm:gap-3 shrink-0 cursor-pointer ml-auto lg:ml-0">
-            <button className="p-2 text-gray-700 hover:text-[#db1521] transition-colors cursor-pointer">
-              <Sun size={24} />
-            </button>
+            <div className="relative group">
+              <button
+                type="button"
+                aria-label="Light Mode"
+                className="p-2 text-gray-700 hover:text-[#db1521] cursor-pointer block rounded-full transition-colors duration-200 hover:bg-gray-100"
+              >
+                <Sun size={24} />
+              </button>
+              <div className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+                <div className="relative">
+                  <div className="absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-[#061456]" />
+                  <div className="relative rounded-[10px] bg-[#061456] px-4 py-1.5 text-[13px] font-medium text-white whitespace-nowrap shadow-md">
+                    Light Mode
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <button className="hidden xl:block text-[16px] font-medium text-gray-700 hover:text-[#db1521] cursor-pointer whitespace-nowrap">
               Sign In
