@@ -3,6 +3,12 @@ import { Header } from './components/navigation/Header';
 import { Montserrat, Geist } from 'next/font/google';
 import { cn } from "@/lib/utils";
 import type { Viewport } from 'next';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Agent for Ecommerce Automation',
+  description: 'ExactFlow is a platform for managing your business operations.',
+}
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
