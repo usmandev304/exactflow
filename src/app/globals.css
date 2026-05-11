@@ -68,11 +68,26 @@ body {
   .animate-spin-slow {
     animation: spin 10s linear infinite;
   }
+
+  .animate-nav-rise {
+    animation: nav-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes nav-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ---break---
