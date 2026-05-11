@@ -123,7 +123,7 @@ export const Hero = () => {
       />
 
       {/* 5. CONTENT LAYER */}
-      <div className="xl:max-w-[1220px] lg:max-w-[894px] relative z-40 mx-auto px-6 xl:pt-17 lg:pt-28 sm:pt-25 xsm:pt-24  grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-8 items-center w-full">
+      <div className="xl:max-w-[1220px] lg:max-w-[894px] relative z-40 mx-auto px-6 xl:pt-20 lg:pt-28 sm:pt-25 xsm:pt-24  grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-8 items-center w-full">
         <HeroContent onInputHoverChange={setIsInputHovered} />
         <div className="relative flex justify-center items-center">
           <HeroMockup />
@@ -140,7 +140,7 @@ export const Hero = () => {
                 d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
               />
             </defs>
-            <text className="text-[14px] font-[700] fill-[#ed0d0d] uppercase tracking-[0.18em] tracking-tight">
+            <text className="text-[14px] font-[600] fill-[#ed0d0d] uppercase tracking-[0.18em] tracking-tight">
               <textPath href="#circlePath" startOffset="0">
                 CONTACT • CONTACT • CONTACT •
               </textPath>
