@@ -123,15 +123,15 @@ export const Hero = () => {
       />
 
       {/* 5. CONTENT LAYER */}
-      <div className="max-w-[1220px] relative z-40 mx-auto px-6 pt-11 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-        <HeroContent isHeroHovered={isHovered} onInputHoverChange={setIsInputHovered} />
+      <div className="xl:max-w-[1220px] lg:max-w-[894px] relative z-40 mx-auto px-6 xl:pt-11 lg:pt-28 sm:pt-25 xsm:pt-24  grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-8 items-center w-full">
+        <HeroContent onInputHoverChange={setIsInputHovered} />
         <div className="relative flex justify-center items-center">
           <HeroMockup />
         </div>
       </div>
 
       {/* 6. Rotating Badge */}
-      <div className="hidden md:flex absolute bottom-22 right-4 items-center justify-center z-50">
+      <div className="hidden xsm:flex fixed bottom-22 right-4 items-center justify-center z-50">
         <div className="relative animate-spin-slow">
           <svg className="w-23 h-32" viewBox="0 0 100 100">
             <defs>

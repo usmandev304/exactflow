@@ -6,7 +6,7 @@ import { NAV_LINKS } from '../constants/navigation';
 
 export const Navbar = () => {
   return (
-    <nav className="hidden lg:flex items-center gap-4 xl:gap-6 flex-nowrap">
+    <nav className="hidden xl:flex items-center gap-4 xl:gap-6 flex-nowrap">
       {NAV_LINKS.map((link) => (
         <Link
           key={link.label}
