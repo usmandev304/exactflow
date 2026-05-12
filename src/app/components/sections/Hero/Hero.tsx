@@ -123,7 +123,7 @@ export const Hero = () => {
       />
 
       {/* 5. CONTENT LAYER */}
-      <div className="xl:max-w-[1220px] lg:max-w-[894px] relative z-40 mx-auto px-6 xl:pt-20 lg:pt-28 sm:pt-25 xsm:pt-24  grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-8 items-center w-full">
+      <div className="xl:max-w-[1220px] lg:max-w-[894px] relative z-40 mx-auto px-6 xl:pt-4 lg:pt-28 sm:pt-25 xsm:pt-24  grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-8 items-center w-full">
         <HeroContent onInputHoverChange={setIsInputHovered} />
         <div className="relative flex justify-center items-center">
           <HeroMockup />
